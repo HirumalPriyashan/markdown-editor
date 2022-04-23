@@ -1,0 +1,23 @@
+{
+  "name": "markdown-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electronjs"
+  ],
+  "author": "Hirumal Priyashan",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^18.0.4",
+    "marked": "^4.0.14"
+  },
+  "devDependencies": {
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-reloader": "^1.2.3"
+  }
+}
