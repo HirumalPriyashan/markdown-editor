@@ -20,11 +20,12 @@ markdownView.addEventListener('keyup', (event) => {
     renderMarkdownToHtml(currentContent);
 });
 
-openFileButton.addEventListener('click', () => {
-    ipcRenderer.invoke('dialog:openFile')
-});
-
-ipcRenderer.on('file-opened', (event, file, content) => {
+openFileButton.addEventListener('click', async() => {
+    const { file, content } = await ipcRenderer.invoke('dialog:openFile')
     markdownView.value = content;
     renderMarkdownToHtml(content);
+});
+
+newFileButton.addEventListener('click', () => {
+    ipcRenderer.invoke('dialog:createWindow');
 });
